@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-cream-50 text-forest-800 transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-forest-900 text-cream-100;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-display text-4xl md:text-5xl text-forest-700 dark:text-cream-100 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-mono text-xs tracking-widest uppercase text-gold-500 dark:text-gold-300 mb-3;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-forest-600 text-cream-50 font-body font-medium text-sm rounded-none
+           hover:bg-forest-700 active:bg-forest-800 transition-all duration-200
+           border border-forest-600 hover:border-forest-700;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-transparent text-forest-700 dark:text-cream-100 font-body font-medium text-sm rounded-none
+           border border-forest-600 dark:border-cream-200/30
+           hover:bg-forest-600 hover:text-cream-50 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white dark:bg-forest-800 border border-cream-200 dark:border-forest-700/50
+           shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cream-100 dark:bg-forest-800;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-forest-400 dark:bg-forest-500 rounded-full;
+}
+
+/* Decorative line pattern */
+.pattern-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(61,107,80,0.06) 4px,
+    rgba(61,107,80,0.06) 5px
+  );
+}
+
+.dark .pattern-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(249,243,232,0.04) 4px,
+    rgba(249,243,232,0.04) 5px
+  );
+}
