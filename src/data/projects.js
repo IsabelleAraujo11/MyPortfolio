@@ -1,27 +1,27 @@
-import presentListImg from '../assets/present.png';
+
 import instagramImg from '../assets/instagram.png';
-import newImg from '../assets/new.png';
+import stImg from '../assets/st.png';
 import techImg from '../assets/tech.png';
 
 export const projects = [
   {
     id: 1,
-    name: 'Present List',
+    name: 'My Wallet App',
     description:
-      'Este projeto é uma plataforma digital de lista de presentes personalizada para um casal, o objetivo é centralizar os desejos do casal em um ambiente elegante, onde os convidados podem escolher presentes de forma simples. O grande diferencial é a integração com o pix permitindo que os convidados colem a chave pix, garantindo praticidade para quem presenteia e liberdade para o casal utilizar o valor como preferir',
-    techs: ['REACT', 'CSS', 'JAVASCRIPT'],
-    image: presentListImg,
-    github: 'https://github.com/IsabelleAraujo11/PresentList',
+      'Desenvolvi o My Wallet, um aplicativo de controle financeiro pessoal com foco em organização de gastos e acompanhamento mensal das despesas. O projeto foi criado para resolver um problema real do dia a dia, proporcionando uma experiência simples, intuitiva e eficiente para gerenciar finanças.',
+    techs: ['React Native', 'Expo', 'Node.js', 'PostgreSQL', 'API REST', 'JavaScript'],
+    image: null,
+    github: 'https://github.com/IsabelleAraujo11/MyWalletApp',
     demo: null,
   },
   {
     id: 2,
-    name: 'NewLeaster',
+    name: 'Stranger Things',
     description:
-      'Trata-se de uma página de newsletter funcional que permite ao usuário alternar a interface entre os modos claro e escuro. O sistema foca na interatividade, oferecendo um formulário de inscrição centralizado e um rodapé que atualiza o ano automaticamente, garantindo uma experiência de uso moderna e sempre atual.',
+      'Desenvolvi uma landing page temática inspirada no universo de Stranger Things, com foco em animações interativas, design responsivo e uma experiência imersiva para o usuário. O projeto explora efeitos visuais modernos e boas práticas de desenvolvimento front-end.',
     techs: ['HTML', 'CSS', 'JavaScript'],
-    image: newImg,
-    github: 'https://github.com/IsabelleAraujo11/NewLeaster',
+    image: stImg,
+    github: 'https://github.com/IsabelleAraujo11/StrangerThingsPage',
     demo: null,
   },
   {
