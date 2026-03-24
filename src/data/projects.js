@@ -2,6 +2,7 @@
 import instagramImg from '../assets/instagram.png';
 import stImg from '../assets/st.png';
 import techImg from '../assets/tech.png';
+import walletImg from '../assets/wallet.png';
 
 export const projects = [
   {
@@ -10,7 +11,7 @@ export const projects = [
     description:
       'Desenvolvi o My Wallet, um aplicativo de controle financeiro pessoal com foco em organização de gastos e acompanhamento mensal das despesas. O projeto foi criado para resolver um problema real do dia a dia, proporcionando uma experiência simples, intuitiva e eficiente para gerenciar finanças.',
     techs: ['React Native', 'Expo', 'Node.js', 'PostgreSQL', 'API REST', 'JavaScript'],
-    image: null,
+    image: walletImg,
     github: 'https://github.com/IsabelleAraujo11/MyWalletApp',
     demo: null,
   },
