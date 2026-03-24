@@ -55,7 +55,7 @@ export default function About() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
               </span>
               <p className="font-body text-sm text-forest-700 dark:text-cream-100">
-                Disponível para oportunidades de <strong className="font-semibold">estágio ou trainee</strong>
+                Disponível para oportunidades de <strong className="font-semibold">estágio, trainee e desenvolvedor ou analista júnior</strong>
               </p>
             </div>
           </div>
