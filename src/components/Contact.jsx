@@ -38,14 +38,18 @@ export default function Contact() {
     <section id="contato" className="py-28 bg-white dark:bg-forest-800/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
-          <p className="section-subtitle">Vamos conversar</p>
-          <h2 className="section-title">Contato</h2>
+          <p className="section-subtitle" data-reveal>Vamos conversar</p>
+          <h2 className="section-title" data-reveal data-reveal-delay={100}>Contato</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left: message */}
           <div>
-            <p className="font-body text-base text-forest-600/80 dark:text-cream-200/70 leading-relaxed mb-8 max-w-md">
+            <p
+              className="font-body text-base text-forest-600/80 dark:text-cream-200/70 leading-relaxed mb-8 max-w-md"
+              data-reveal
+              data-reveal-delay={160}
+            >
               Estou aberta a novas oportunidades de estágio, trainee ou posições junior.
               Caso queira bater um papo, tirar uma dúvida ou propor alguma colaboração,
               fique à vontade para entrar em contato!
@@ -54,6 +58,8 @@ export default function Contact() {
             <a
               href="mailto:isabellelouzada@gmail.com"
               className="btn-primary"
+              data-reveal
+              data-reveal-delay={240}
             >
               <Mail size={16} />
               Enviar e-mail
@@ -62,8 +68,8 @@ export default function Contact() {
 
           {/* Right: contact cards */}
           <div className="space-y-3">
-            {contacts.map((c) => (
-              <ContactCard key={c.label} contact={c} />
+            {contacts.map((c, idx) => (
+              <ContactCard key={c.label} contact={c} index={idx} />
             ))}
           </div>
         </div>
@@ -72,7 +78,7 @@ export default function Contact() {
   )
 }
 
-function ContactCard({ contact }) {
+function ContactCard({ contact, index }) {
   const inner = (
     <div className="card p-4 flex items-center gap-4 group">
       <div className="text-gold-500 dark:text-gold-300 shrink-0">{contact.icon}</div>
@@ -87,11 +93,22 @@ function ContactCard({ contact }) {
     </div>
   )
 
+  const delay = index * 80
+
   return contact.href ? (
-    <a href={contact.href} target="_blank" rel="noopener noreferrer">
+    <a
+      href={contact.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+      data-reveal
+      data-reveal-delay={delay}
+    >
       {inner}
     </a>
   ) : (
-    <div>{inner}</div>
+    <div className="block" data-reveal data-reveal-delay={delay}>
+      {inner}
+    </div>
   )
 }

@@ -41,13 +41,20 @@ export default function Skills() {
     <section id="tecnologias" className="py-28 pattern-lines">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
-          <p className="section-subtitle">Competências</p>
-          <h2 className="section-title">Tecnologias &amp; Habilidades</h2>
+          <p className="section-subtitle" data-reveal>Competências</p>
+          <h2 className="section-title" data-reveal data-reveal-delay={100}>
+            Tecnologias &amp; Habilidades
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {skills.map((group) => (
-            <div key={group.category} className="card p-6">
+          {skills.map((group, idx) => (
+            <div
+              key={group.category}
+              className="card p-6"
+              data-reveal
+              data-reveal-delay={idx * 90}
+            >
               <h3 className="font-mono text-xs uppercase tracking-widest text-gold-500 dark:text-gold-300 mb-6">
                 {group.category}
               </h3>
@@ -81,7 +88,9 @@ function SkillBar({ skill }) {
       <div className="h-1.5 w-full bg-cream-200 dark:bg-forest-700 overflow-hidden">
         <div
           className="h-full bg-forest-500 dark:bg-gold-400 transition-all duration-1000"
-          style={{ width: `${skill.level}%` }}
+          data-skillbar-fill
+          data-level={skill.level}
+          style={{ width: '0%' }}
         />
       </div>
     </div>

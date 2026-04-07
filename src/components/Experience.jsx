@@ -42,8 +42,8 @@ export default function Experience() {
     <section id="experiencia" className="py-28 pattern-lines">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
-          <p className="section-subtitle">Trajetória</p>
-          <h2 className="section-title">Experiência Profissional</h2>
+          <p className="section-subtitle" data-reveal>Trajetória</p>
+          <h2 className="section-title" data-reveal data-reveal-delay={100}>Experiência Profissional</h2>
         </div>
 
         <div className="relative">
@@ -70,7 +70,11 @@ function TimelineItem({ exp, index }) {
       <div className="absolute hidden md:block left-1/2 top-6 w-3 h-3 -translate-x-1/2 border-2 border-gold-400 dark:border-gold-300 bg-cream-50 dark:bg-forest-900" />
 
       {/* Content */}
-      <div className={`card p-6 ${isLeft ? 'md:col-start-1 md:text-right' : 'md:col-start-2'}`}>
+      <div
+        className={`card p-6 ${isLeft ? 'md:col-start-1 md:text-right' : 'md:col-start-2'}`}
+        data-reveal
+        data-reveal-delay={index * 90}
+      >
         <div className={`flex items-start gap-3 mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
           <div>
             <div className={`flex items-center gap-2 mb-0.5 ${isLeft ? 'md:justify-end' : ''}`}>

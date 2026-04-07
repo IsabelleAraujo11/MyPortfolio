@@ -6,8 +6,8 @@ export default function Projects() {
     <section id="projetos" className="py-28 bg-white dark:bg-forest-800/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
-          <p className="section-subtitle">Portfólio</p>
-          <h2 className="section-title">Projetos</h2>
+          <p className="section-subtitle" data-reveal>Portfólio</p>
+          <h2 className="section-title" data-reveal data-reveal-delay={100}>Projetos</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -41,7 +41,7 @@ function ProjectCard({ project, index }) {
   ]
 
   return (
-    <div className="card group flex flex-col overflow-hidden">
+    <div className="card group flex flex-col overflow-hidden" data-reveal data-reveal-delay={index * 90}>
       {/* Image / placeholder */}
       <div className={`h-44 ${colors[index % colors.length]} flex items-center justify-center relative overflow-hidden`}>
         {project.image ? (

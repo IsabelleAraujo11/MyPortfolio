@@ -41,6 +41,18 @@
     @apply bg-white dark:bg-forest-800 border border-cream-200 dark:border-forest-700/50
            shadow-sm hover:shadow-md transition-shadow duration-300;
   }
+
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition: opacity 700ms ease, transform 700ms ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.reveal--in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* Custom scrollbar */

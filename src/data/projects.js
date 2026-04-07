@@ -4,6 +4,7 @@ import stImg from '../assets/st.png';
 import techImg from '../assets/tech.png';
 import walletImg from '../assets/wallet.png';
 
+
 export const projects = [
   {
     id: 1,
