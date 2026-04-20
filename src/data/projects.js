@@ -1,7 +1,7 @@
 
 import instagramImg from '../assets/instagram.png';
 import stImg from '../assets/st.png';
-import techImg from '../assets/tech.png';
+import cvImg from '../assets/cv.png';
 import walletImg from '../assets/wallet.png';
 
 
@@ -28,12 +28,12 @@ export const projects = [
   },
   {
     id: 3,
-    name: 'Tech Solutions',
+    name: 'SmartCV',
     description:
-      'Este projeto é um site institucional da TechSolutions, que apresenta os serviços da empresa, planos de preços, busca de domínio e um formulário de contato. Possui um design moderno, organizado e responsivo, com o objetivo de divulgar a empresa e atrair clientes.',
-    techs: ['HTML', 'CSS'],
-    image: techImg,
-    github: 'https://github.com/IsabelleAraujo11/TechSolutions',
+      'Aplicação web para criar currículos profissionais otimizados para ATS (Applicant Tracking Systems). O usuário preenche um formulário por seções e vê uma pré-visualização em tempo real; pode gerar PDF e rodar uma análise de qualidade com pontuação (0 a 100) e sugestões.',
+    techs: ['REACT', 'VITE', 'JavaScript', 'CSS',],
+    image: cvImg,
+    github: 'https://github.com/IsabelleAraujo11/SmartCV',
     demo: null,
   },
   {
